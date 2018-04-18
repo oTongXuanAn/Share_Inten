@@ -10,14 +10,14 @@
     <!-- Activity icon when presenting dialog
          Size will be filled in by ResolverActivity -->
     <ImageView
-        android:id="@android:id/icon"
+        android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter" />
 
     <!-- Activity name -->
     <TextView
-        android:id="@android:id/text1"
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

@@ -22,7 +22,7 @@ class MyAdapter(var c: Context, var items: ArrayList<ResolveInfo>) : RecyclerVie
     }
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
-
+        holder?.bindData(items.get(position))
     }
 
     override fun getItemCount(): Int {
@@ -32,7 +32,7 @@ class MyAdapter(var c: Context, var items: ArrayList<ResolveInfo>) : RecyclerVie
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindData(item: ResolveInfo) {
-            itemView.text1.text = item.activityInfo.applicationInfo.name
+            itemView.text1.text = item.activityInfo.packageName
             //  itemView.icon.setImageDrawable(item.activityInfo.applicationInfo.loadIcon(item.activityInfo.applicationInfo.packageName(con)))
         }
 

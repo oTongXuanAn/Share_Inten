@@ -66,11 +66,12 @@ class MainActivity : AppCompatActivity() {
                     }
                     targetedShare.setPackage(info.activityInfo.packageName);
                     targetedShareIntents.add(targetedShare)
-                    targetedShareIntents2.add(info)
+
                     Log.e("log",""+info.activityInfo.packageName)
                 }
+                targetedShareIntents2.add(info)
             }
-           // recyclerView.adapter = MyAdapter(this, targetedShareIntents2)
+             recyclerView.adapter = MyAdapter(this, targetedShareIntents2)
             if (targetedShareIntents.size > 0) {
                 var chooserIntent = Intent.createChooser(targetedShareIntents.removeAt(0), "Select app to share");
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, targetedShareIntents.toArray(arrayOf<Parcelable>()));
